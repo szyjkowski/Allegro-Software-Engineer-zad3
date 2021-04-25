@@ -4,9 +4,9 @@
  Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetlanie sumy gwiazdek.
 
 ## 1. Sposób uruchomienia:
-    a) Za pomocą skompliowanej paczki .jar w katalogu target.
-    b) z poziomu konsoli znajdując się w głównym katalogu "github-api" poleceniem mvn spring-boot:run(wcześniej można wykonać polecenie mvn clean install).
-    c) Z poziomu IDE.
+* Za pomocą skompliowanej paczki .jar w katalogu target.
+* z poziomu konsoli znajdując się w głównym katalogu "github-api" poleceniem mvn spring-boot:run(wcześniej można wykonać polecenie mvn clean install).
+* Z poziomu IDE.
     
 2. Po uruchomieniu, włączamy przeglądarkę, korzystając z localhosta uruchamiamy api w następujący sposób:
 ## a) listowanie repozytoriów dla użytkownika, wpisujemy:
