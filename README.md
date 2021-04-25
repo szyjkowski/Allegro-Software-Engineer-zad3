@@ -1,15 +1,15 @@
 # Allegro-Software-Engineer-zad3
 
-Aplikacja działa na localhost na porcie 8080.
+## Aplikacja działa na localhost na porcie 8080.
 
-1. Sposób uruchomienia:
+# 1. Sposób uruchomienia:
     a) Za pomocą skompliowanej paczki .jar w katalogu target.
     b) z poziomu konsoli znajdując się w głównym katalogu "github-api" poleceniem mvn spring-boot:run(wcześniej można wykonać polecenie mvn clean install).
     c) Z poziomu IDE.
     
-Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetlanie sumy gwiazdek.
+##Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetlanie sumy gwiazdek.
 
-2. Po uruchomieniu, włączamy przeglądarkę, korzystając z localhosta uruchamiamy api w następujący sposób:
+#2. Po uruchomieniu, włączamy przeglądarkę, korzystając z localhosta uruchamiamy api w następujący sposób:
     a) listowanie repozytoriów dla użytkownika, wpisujemy:
         I)    http://localhost:8080/github-api/list-repo?name=GitHubUserName - listowanie repozytorium dla użytkownika "GitHubUserName"
               ex: http://localhost:8080/github-api/list-repo?name=szyjkowski
