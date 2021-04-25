@@ -36,5 +36,5 @@ U have to put param name. Example: http://localhost:8080/github-api/count-stars?
 3. Aplikacja napisana z wykorzystaniem spring-boota w wersji 2.4.5, java 11 + maven + JUnit5, co pozwala na korzystanie z gotowych narzędzi i łatwiejsze rozwinięcie aplikacji w późniejszym czasie.
 4. Aplikacja rozszerzona o testy jednostkowe.
 5. Do wygodniejszego testowania oprogramowania, można by użyć Swaggera.
-
+<p style='color:red'>This is some red text.</p>
 
