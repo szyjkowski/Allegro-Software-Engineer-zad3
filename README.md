@@ -7,7 +7,7 @@
     b) z poziomu konsoli znajdując się w głównym katalogu "github-api" poleceniem mvn spring-boot:run(wcześniej można wykonać polecenie mvn clean install).
     c) Z poziomu IDE.
     
-## Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetlanie sumy gwiazdek.
+### Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetlanie sumy gwiazdek.
 
 #2. Po uruchomieniu, włączamy przeglądarkę, korzystając z localhosta uruchamiamy api w następujący sposób:
     a) listowanie repozytoriów dla użytkownika, wpisujemy:
