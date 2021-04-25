@@ -14,7 +14,7 @@
      + listowanie repozytorium dla użytkownika "GitHubUserName"
      + przykład: http://localhost:8080/github-api/list-repo?name=szyjkowski
 * Należy podać z parametrem("?name=gitHubUserName") w przeciwnym wypadku otrzymamy komunikat:
-       + U have to put param name. Example: http://localhost:8080/github-api/list-repo?name=GitHubUserName";
+     + U have to put param name. Example: http://localhost:8080/github-api/list-repo?name=GitHubUserName";
 * Jeśli przekazana nazwa użytkownika jako parametr nie istnieje w githubie otrzymamy komunikat:
      + Error 404 Not Found. User not exist.
 * Jeśli wystąpi inny błąd otrzymamy:
@@ -23,10 +23,11 @@
      + User has no repositories
 
 ### b) zwracanie sumy gwiazdek we wszystkich repozytoriach użytkownika, wpisujemy:
-* http://localhost:8080/github-api/count-stars?name=GitHubUserName - sumowanie gwiazdek dla użytkownika "GitHubUserName"
-http://localhost:8080/github-api/count-stars?name=szyjkowski
-Należy podać z parametrem("?name=gitHubUserName") w przeciwnym wypadku otrzymamy komunikat:
-U have to put param name. Example: http://localhost:8080/github-api/count-stars?name=GitHubUserName";
+* http://localhost:8080/github-api/count-stars?name=GitHubUserName -
+   + sumowanie gwiazdek dla użytkownika "GitHubUserName"
+   + http://localhost:8080/github-api/count-stars?name=szyjkowski
+* Należy podać z parametrem("?name=gitHubUserName") w przeciwnym wypadku otrzymamy komunikat:
+   + U have to put param name. Example: http://localhost:8080/github-api/count-stars?name=GitHubUserName";
 * Jeśli przekazana nazwa użytkownika jako parametr nie istnieje w githubie otrzymamy komunikat:
     + Error 404 Not Found. User not exist.
 * Jeśli wystąpi inny błąd otrzymamy:
