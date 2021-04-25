@@ -33,7 +33,7 @@ Aplikacja została celowo rozdzielona osobno na listowanie i osobno na wyświetl
               Error /kod_bledu + status_bledu;
       IV)     Jeśli użytkownik istnieje, ale nie ma repozytoriów otrzymamy:
               User has no repositories
-3. Aplikacja napisana z wykorzystaniem spring-boota w wersji 2.4.5, java 11 + maven, co pozwala na korzystanie z gotowych narzędzi i łatwiejsze rozwinięcie aplikacji w późniejszym czasie.
+3. Aplikacja napisana z wykorzystaniem spring-boota w wersji 2.4.5, java 11 + maven + JUnit5, co pozwala na korzystanie z gotowych narzędzi i łatwiejsze rozwinięcie aplikacji w późniejszym czasie.
 4. Aplikacja rozszerzona o testy jednostkowe.
 5. Do wygodniejszego testowania oprogramowania, można by użyć Swaggera.
 
