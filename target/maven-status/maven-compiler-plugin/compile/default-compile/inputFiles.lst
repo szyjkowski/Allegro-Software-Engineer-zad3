@@ -1,7 +1,7 @@
 C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\Constants.java
 C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\GithubApiApplication.java
-C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\GitHubUserRepositoryController.java
-C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\RestTemplateConfiguration.java
-C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\GitHubUser.java
-C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\GitHubUserRepositoryService.java
-C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\GitHubUserRepository.java
+C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\model\GitHubUserRepository.java
+C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\config\RestTemplateConfiguration.java
+C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\controller\GitHubUserRepositoryController.java
+C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\service\GitHubUserRepositoryService.java
+C:\Users\Łukasz\Desktop\Finally\github-api\github-api\src\main\java\pl\szyjkowski\githubapi\model\GitHubUser.java

@@ -1,7 +1,8 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import pl.szyjkowski.githubapi.model.GitHubUser;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GitHubUserRepository {
@@ -42,6 +43,4 @@ public class GitHubUserRepository {
     public int getCountOfStars() {
         return countOfStars;
     }
-
-
 }

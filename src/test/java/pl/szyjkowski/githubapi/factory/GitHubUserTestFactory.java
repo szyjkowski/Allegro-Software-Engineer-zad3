@@ -1,10 +1,9 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.factory;
 
-import static org.junit.jupiter.api.Assertions.*;
+import pl.szyjkowski.githubapi.model.GitHubUser;
 
 class GitHubUserTestFactory {
     public static GitHubUser create() {
         return new GitHubUser("szyjkowski");
     }
-
 }

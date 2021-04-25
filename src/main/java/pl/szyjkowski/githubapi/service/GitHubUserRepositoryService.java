@@ -1,6 +1,8 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.service;
 
 import org.springframework.stereotype.Service;
+import pl.szyjkowski.githubapi.Constants;
+import pl.szyjkowski.githubapi.model.GitHubUserRepository;
 
 @Service
 public class GitHubUserRepositoryService implements Constants {
@@ -12,7 +14,7 @@ public class GitHubUserRepositoryService implements Constants {
         }
 
         String countOfStarsString = "Count of stars form all user repositories = " +
-                String.valueOf(countOfStars) + ".";
+                countOfStars + ".";
         return checkUserHasRepository(githubUserRepository, countOfStarsString);
     }
 

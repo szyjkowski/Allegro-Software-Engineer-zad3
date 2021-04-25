@@ -1,4 +1,4 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.controller;
 
 
 import org.junit.jupiter.api.DisplayName;
@@ -12,6 +12,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
+import pl.szyjkowski.githubapi.factory.GitHubUserRepositoryArrayTestFactory;
+import pl.szyjkowski.githubapi.model.GitHubUserRepository;
+import pl.szyjkowski.githubapi.service.GitHubUserRepositoryService;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -27,9 +31,8 @@ class GitHubUserRepositoryControllerTest {
     @Mock
     private RestTemplate restTemplateMock;
 
-
     @Test
-    @DisplayName("should return put param message if the path in list-repo has no parameter")
+    @DisplayName("should return put param message when the path in list-repo has no parameter")
     public void test1() {
         //given
         String name = "";
@@ -41,7 +44,7 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return put param message if the path in count-stars has no parameter")
+    @DisplayName("should return put param message when the path in count-stars has no parameter")
     public void test2() {
         //given
         String name = "";
@@ -53,14 +56,15 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return Error 404 status for count-stars if param is not empty and restTemplate throw Http status 404")
+    @DisplayName("should return Error 404 status for count-stars when param is not empty and restTemplate throw Http status 404")
     public void test3() {
         //given
         String name = "szyjkowski";
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpClientErrorException httpClientErrorException = new HttpClientErrorException(httpStatus, "status not found");
 
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
+
         BDDMockito.given(restTemplateMock.getForEntity(
                 URL, GitHubUserRepository[].class)).willThrow(httpClientErrorException);
         //when
@@ -71,14 +75,15 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return Error 404 status for list-repo if param is not empty and restTemplate throw Http status 404")
+    @DisplayName("should return Error 404 status for list-repo when param is not empty and restTemplate throw Http status 404")
     public void test4() {
         //given
         String name = "szyjkowski";
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpClientErrorException httpClientErrorException = new HttpClientErrorException(httpStatus, "status not found");
 
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
+
         BDDMockito.given(restTemplateMock.getForEntity(
                 URL, GitHubUserRepository[].class)).willThrow(httpClientErrorException);
         //when
@@ -89,13 +94,14 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return Error code and status for count-stars if param is not empty and restTemplate throw Http error exception")
+    @DisplayName("should return Error code and status for count-stars when param is not empty and restTemplate throw Http error exception")
     public void test5() {
         //given
         String name = "szyjkowski";
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpClientErrorException httpClientErrorException = new HttpClientErrorException(httpStatus, "status not found");
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
+
         BDDMockito.given(restTemplateMock.getForEntity(
                 URL, GitHubUserRepository[].class)).willThrow(httpClientErrorException);
         //when
@@ -106,14 +112,15 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return Error code and status for list-repo if param is not empty and restTemplate throw Http error exception")
+    @DisplayName("should return Error code and status for list-repo when param is not empty and restTemplate throw Http error exception")
     public void test6() {
         //given
         String name = "szyjkowski";
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpClientErrorException httpClientErrorException = new HttpClientErrorException(httpStatus, "status not found");
 
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
+
         BDDMockito.given(restTemplateMock.getForEntity(
                 URL, GitHubUserRepository[].class)).willThrow(httpClientErrorException);
         //when
@@ -125,11 +132,12 @@ class GitHubUserRepositoryControllerTest {
     }
 
     @Test
-    @DisplayName("should return count of stars from all user repositories if name is not empty and restTemplate return statusCode 200")
+    @DisplayName("should return count of stars from all user repositories when name is not empty and restTemplate return statusCode 200")
     public void test7() {
         //given
         String name = "szyjkowski";
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
+
         GitHubUserRepository[] gitHubUserRepositories = GitHubUserRepositoryArrayTestFactory.create();
         ResponseEntity<GitHubUserRepository[]> responseEntity = ResponseEntity.ok(gitHubUserRepositories);
         BDDMockito.given(restTemplateMock.getForEntity(
@@ -149,20 +157,20 @@ class GitHubUserRepositoryControllerTest {
     public void test8() {
         //given
         String name = "szyjkowski";
-        String URL = "https://api.github.com/users/" + name + "/repos";;
+        String URL = "https://api.github.com/users/" + name + "/repos";
         GitHubUserRepository[] gitHubUserRepositories = GitHubUserRepositoryArrayTestFactory.create();
         ResponseEntity<GitHubUserRepository[]> responseEntity = ResponseEntity.ok(gitHubUserRepositories);
         BDDMockito.given(restTemplateMock.getForEntity(
                 URL, GitHubUserRepository[].class)).willReturn(responseEntity);
-        String willReturnStringValue =  " Repository name: repositoryName1 has 10 stars. <br/>"
-                +  " Repository name: " + "repositoryName1" +
+        String willReturnStringValue = " Repository name: repositoryName1 has 10 stars. <br/>"
+                + " Repository name: " + "repositoryName1" +
                 " has 10 stars. <br/>";
         BDDMockito.given(serviceMock.getListRepository(gitHubUserRepositories)).willReturn(willReturnStringValue);
         //when
         String actualOutput = cut.listUserRepositories(name);
         //then
         String expectedOutput = " Repository name: repositoryName1 has 10 stars. <br/>"
-                +  " Repository name: " + "repositoryName1" +
+                + " Repository name: " + "repositoryName1" +
                 " has 10 stars. <br/>";
         assertEquals(expectedOutput, actualOutput);
     }

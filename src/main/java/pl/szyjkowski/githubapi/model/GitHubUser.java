@@ -1,4 +1,4 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

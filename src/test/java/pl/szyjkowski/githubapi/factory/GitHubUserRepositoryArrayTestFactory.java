@@ -1,6 +1,6 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.factory;
 
-import org.springframework.http.ResponseEntity;
+import pl.szyjkowski.githubapi.model.GitHubUserRepository;
 
 public class GitHubUserRepositoryArrayTestFactory {
     public static GitHubUserRepository[] create() {

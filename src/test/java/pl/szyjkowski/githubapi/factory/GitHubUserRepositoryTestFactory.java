@@ -1,4 +1,7 @@
-package pl.szyjkowski.githubapi;
+package pl.szyjkowski.githubapi.factory;
+
+import pl.szyjkowski.githubapi.model.GitHubUser;
+import pl.szyjkowski.githubapi.model.GitHubUserRepository;
 
 class GitHubUserRepositoryTestFactory {
 
@@ -6,5 +9,4 @@ class GitHubUserRepositoryTestFactory {
         GitHubUser gitHubUser = GitHubUserTestFactory.create();
         return new GitHubUserRepository("repositoryName1", gitHubUser, 10);
     }
-
 }
