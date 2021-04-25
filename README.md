@@ -11,8 +11,8 @@
 ## 2. Po uruchomieniu, włączamy przeglądarkę, korzystając z localhosta uruchamiamy api w następujący sposób:
 ### a) listowanie repozytoriów dla użytkownika, wpisujemy:
 * http://localhost:8080/github-api/list-repo?name=GitHubUserName 
-       + listowanie repozytorium dla użytkownika "GitHubUserName"
-       + przykład: http://localhost:8080/github-api/list-repo?name=szyjkowski
+     + listowanie repozytorium dla użytkownika "GitHubUserName"
+     + przykład: http://localhost:8080/github-api/list-repo?name=szyjkowski
 * Należy podać z parametrem("?name=gitHubUserName") w przeciwnym wypadku otrzymamy komunikat:
        + U have to put param name. Example: http://localhost:8080/github-api/list-repo?name=GitHubUserName";
 * Jeśli przekazana nazwa użytkownika jako parametr nie istnieje w githubie otrzymamy komunikat:
